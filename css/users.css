@@ -1,0 +1,123 @@
+.users-container {
+    margin-top: 85px;
+    max-width: 960px;
+}
+
+.users-search-card {
+    padding: 25px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.search-input-wrapper {
+    margin-top: 15px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.search-input-wrapper input {
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 25px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--glass-border);
+    color: white;
+    outline: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.search-input-wrapper input:focus {
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 10px rgba(0, 150, 255, 0.2);
+}
+
+.users-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.user-card {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+}
+
+.user-card img.user-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--glass-border);
+    background: var(--bg-dark);
+}
+
+.user-card .user-name-line {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    justify-content: center;
+}
+
+.user-card h3 {
+    font-size: 16px;
+}
+
+.user-card .user-handle {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.user-card .user-bio {
+    font-size: 13px;
+    color: var(--text-main);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 38px;
+}
+
+.user-card-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+    width: 100%;
+}
+
+.user-card-actions button {
+    flex: 1;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-follow {
+    background: var(--accent-blue);
+    color: white;
+    border: none;
+}
+
+.btn-follow:hover {
+    opacity: 0.9;
+}
+
+.btn-unfollow {
+    background: transparent;
+    border: 1px solid var(--glass-border);
+    color: var(--text-main);
+}
+
+.btn-unfollow:hover {
+    background: rgba(255, 59, 92, 0.1);
+    color: var(--accent-red);
+    border-color: var(--accent-red);
+}

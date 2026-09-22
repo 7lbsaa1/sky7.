@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الملف الشخصي - sky7</title>
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/profile.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar glass-card">
+        <div class="nav-container">
+            <a href="/home" class="nav-logo">
+                <img src="https://cdn-icons-png.flaticon.com/128/7978/7978734.png" alt="sky7 logo">
+                <span>sky7</span>
+            </a>
+
+            <div class="nav-menu">
+                <a href="/home" class="nav-link">الرئيسية</a>
+                <a href="/users" class="nav-link">الأصدقاء</a>
+                <a href="/favorite" class="nav-link">المحفوظات</a>
+                <a href="/profile" class="nav-user active">
+                    <img src="https://cdn-icons-png.flaticon.com/128/847/847969.png" id="nav-avatar" alt="Avatar">
+                    <span id="nav-username">جاري التحميل...</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container profile-container">
+        <!-- COVER & HEADER -->
+        <div class="glass-card profile-header-card">
+            <div class="cover-container">
+                <img id="profile-cover-img" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%'><rect width='100%' height='100%' fill='%23121824'/></svg>" alt="Cover Photo">
+            </div>
+            
+            <div class="profile-info-bar">
+                <div class="avatar-wrapper">
+                    <img id="profile-avatar-img" src="https://cdn-icons-png.flaticon.com/128/847/847969.png" alt="Profile Picture">
+                </div>
+
+                <div class="user-details">
+                    <div class="name-line">
+                        <h1 id="profile-full-name">...</h1>
+                        <img id="profile-verified-badge" src="https://cdn-icons-png.flaticon.com/128/10629/10629607.png" class="verified-badge" style="display:none;" title="حساب موثق">
+                    </div>
+                    <p id="profile-user-handle" class="text-muted">@...</p>
+                    <p id="profile-bio-text" class="bio-text">لا توجد نبذة شخصية حتى الآن.</p>
+                </div>
+
+                <div class="profile-actions">
+                    <button id="open-edit-profile-btn" class="btn-primary">تعديل الملف الشخصي</button>
+                </div>
+            </div>
+
+            <div class="profile-stats-bar">
+                <div class="stat-item">
+                    <span class="stat-number" id="stat-posts-count">0</span>
+                    <span class="stat-label">المنشورات</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="stat-friends-count">0</span>
+                    <span class="stat-label">الأصدقاء</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="stat-photos-count">0</span>
+                    <span class="stat-label">الصور</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- USER POSTS FEED -->
+        <div class="user-posts-section">
+            <h2 class="section-title">منشوراتي</h2>
+            <div id="user-posts-feed">
+                <div class="skeleton-post glass-card">
+                    <div class="sk-header"></div>
+                    <div class="sk-body"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: EDIT PROFILE -->
+    <div id="edit-profile-modal" class="modal-overlay">
+        <div class="glass-card modal-content edit-modal">
+            <div class="modal-header">
+                <h3>تعديل الملف الشخصي</h3>
+                <button class="close-modal" id="close-edit-modal">&times;</button>
+            </div>
+
+            <form id="edit-profile-form">
+                <!-- COVER EDIT -->
+                <div class="edit-cover-section">
+                    <label>صورة الغلاف</label>
+                    <div class="cover-preview-box">
+                        <img id="edit-cover-preview" src="">
+                        <input type="file" id="edit-cover-input" accept="image/*" hidden>
+                        <button type="button" class="btn-secondary btn-sm" id="change-cover-btn">تغيير الغلاف</button>
+                    </div>
+                </div>
+
+                <!-- AVATAR EDIT -->
+                <div class="edit-avatar-section">
+                    <label>الصورة الشخصية</label>
+                    <div class="avatar-preview-box">
+                        <img id="edit-avatar-preview" src="">
+                        <input type="file" id="edit-avatar-input" accept="image/*" hidden>
+                        <button type="button" class="btn-secondary btn-sm" id="change-avatar-btn">تغيير الصورة</button>
+                    </div>
+                </div>
+
+                <!-- DATA EDIT -->
+                <div class="input-group">
+                    <label for="edit-name">الاسم الكامل</label>
+                    <input type="text" id="edit-name" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="edit-bio">النبذة الشخصية (Bio)</label>
+                    <textarea id="edit-bio" rows="3" maxlength="160" placeholder="اكتب نبذة عن حبك للسماء والتصوير..."></textarea>
+                    <div class="char-counter"><span id="bio-char-count">0</span>/160</div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn-secondary" id="cancel-edit-btn">إلغاء</button>
+                    <button type="submit" class="btn-primary" id="save-profile-btn">حفظ التغييرات</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="/js/profile.js"></script>
+</body>
+</html>

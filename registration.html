@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-width=1.0">
+    <title>إنشاء حساب - sky7</title>
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/auth.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="glass-card auth-card">
+            <div class="brand">
+                <img src="https://cdn-icons-png.flaticon.com/128/7978/7978734.png" alt="sky7 logo" class="logo">
+                <h2>إنشاء حساب جديد</h2>
+            </div>
+            
+            <form id="register-form">
+                <div class="input-group">
+                    <label for="fullname">الاسم الكامل</label>
+                    <input type="text" id="fullname" required placeholder="مثال: عمر أشرف">
+                </div>
+
+                <div class="input-group">
+                    <label for="username">اسم المستخدم</label>
+                    <input type="text" id="username" required placeholder="مثال: omar_ashraf">
+                </div>
+
+                <div class="input-group">
+                    <label for="reg-email">البريد الإلكتروني</label>
+                    <input type="email" id="reg-email" required placeholder="أدخل بريدك الإلكتروني">
+                </div>
+                
+                <div class="input-group">
+                    <label for="reg-password">كلمة المرور</label>
+                    <input type="password" id="reg-password" required placeholder="6 أحرف على الأقل">
+                </div>
+
+                <div id="reg-error-message" class="error-text"></div>
+
+                <button type="submit" class="btn-primary auth-btn" id="register-btn">إنشاء الحساب</button>
+            </form>
+            
+            <p class="auth-footer">لديك حساب بالفعل؟ <a href="/login">تسجيل الدخول</a></p>
+        </div>
+    </div>
+
+    <script type="module" src="/js/auth.js"></script>
+</body>
+</html>

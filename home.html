@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الصفحة الرئيسية - sky7</title>
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar glass-card">
+        <div class="nav-container">
+            <a href="/home" class="nav-logo">
+                <img src="https://cdn-icons-png.flaticon.com/128/7978/7978734.png" alt="sky7 logo">
+                <span>sky7</span>
+            </a>
+
+            <div class="nav-search">
+                <input type="text" id="global-search" placeholder="ابحث عن أصدقاء، صور، أو أي شيء...">
+            </div>
+
+            <div class="nav-menu">
+                <a href="/home" class="nav-link active">الرئيسية</a>
+                <a href="/users" class="nav-link">الأصدقاء</a>
+                <a href="/favorite" class="nav-link">المحفوظات</a>
+                <a href="/notifications" class="nav-link icon-link">
+                    🔔 <span class="badge" id="notif-badge">0</span>
+                </a>
+                <a href="/profile" class="nav-user" id="nav-user-profile">
+                    <img src="https://cdn-icons-png.flaticon.com/128/847/847969.png" id="nav-avatar" alt="Avatar">
+                    <span id="nav-username">جاري التحميل...</span>
+                </a>
+                <button id="logout-btn" class="btn-logout">خروج</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN 3-COLUMN LAYOUT -->
+    <div class="main-layout container">
+        
+        <!-- RIGHT SIDEBAR (قائمة المستخدم الشخصية والتنقل) -->
+        <aside class="sidebar glass-card">
+            <div class="user-card-mini">
+                <img src="https://cdn-icons-png.flaticon.com/128/847/847969.png" id="side-avatar" class="avatar-lg" alt="Profile">
+                <div>
+                    <h3 id="side-name">...</h3>
+                    <p id="side-username">@...</p>
+                </div>
+            </div>
+            <hr class="divider">
+            <ul class="sidebar-links">
+                <li><a href="/home" class="active">🏠 الرئيسية</a></li>
+                <li><a href="/profile">👤 الملف الشخصي</a></li>
+                <li><a href="/favorite">🔖 الصور المحفوظة</a></li>
+                <li><a href="/users">👥 قائمة الأصدقاء</a></li>
+                <li><a href="/admin" id="admin-link" style="display:none;">⚙️ لوحة الإدارة</a></li>
+            </ul>
+        </aside>
+
+        <!-- CENTER FEED -->
+        <main class="feed-container">
+            
+            <!-- CREATE POST CARD -->
+            <div class="glass-card create-post-card">
+                <div class="create-post-top">
+                    <img src="https://cdn-icons-png.flaticon.com/128/847/847969.png" class="avatar-md" id="create-avatar" alt="User">
+                    <button class="open-upload-btn" id="open-post-modal">ماذا في بالك اليوم حول السماء والطقس؟</button>
+                </div>
+                <div class="create-post-actions">
+                    <button class="action-btn" id="trigger-file-btn">📸 نشر صورة</button>
+                </div>
+            </div>
+
+            <!-- FEED POSTS LIST -->
+            <div id="posts-feed">
+                <div class="skeleton-post glass-card">
+                    <div class="sk-header"></div>
+                    <div class="sk-body"></div>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- LEFT SIDEBAR (الأصدقاء والمحادثات السريعة) -->
+        <aside class="right-sidebar glass-card">
+            <h3>الأصدقاء المتصلون</h3>
+            <div id="online-friends" class="friends-list">
+                <p class="text-muted">لا يوجد أصدقاء متصلون حالياً</p>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- MODAL: UPLOAD POST -->
+    <div id="upload-modal" class="modal-overlay">
+        <div class="glass-card modal-content">
+            <div class="modal-header">
+                <h3>إنشاء منشور جديد</h3>
+                <button class="close-modal" id="close-upload-modal">&times;</button>
+            </div>
+            <form id="post-form">
+                <textarea id="post-caption" placeholder="اكتب وصفاً للصورة أو حالة الطقس..." rows="3" required></textarea>
+                
+                <div class="image-upload-area" id="drop-area">
+                    <input type="file" id="post-image-input" accept="image/*" required hidden>
+                    <div id="upload-placeholder">
+                        <span>📁 اضغط لاختيار صورة السماء أو الطبيعة</span>
+                    </div>
+                    <img id="image-preview" src="" alt="Preview" style="display:none;">
+                </div>
+
+                <div id="upload-progress" class="progress-bar" style="display:none;">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn-secondary" id="cancel-post-btn">إلغاء</button>
+                    <button type="submit" class="btn-primary" id="submit-post-btn">نشر الآن</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION -->
+    <div id="toast-container"></div>
+
+    <script type="module" src="/js/home.js"></script>
+    <script type="module" src="/js/posts.js"></script>
+</body>
+</html>

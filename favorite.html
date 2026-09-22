@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الصور المحفوظة - sky7</title>
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar glass-card">
+        <div class="nav-container">
+            <a href="/home" class="nav-logo">
+                <img src="https://cdn-icons-png.flaticon.com/128/7978/7978734.png" alt="sky7 logo">
+                <span>sky7</span>
+            </a>
+            <div class="nav-menu">
+                <a href="/home" class="nav-link">الرئيسية</a>
+                <a href="/profile" class="nav-link">الملف الشخصي</a>
+                <a href="/favorite" class="nav-link active">المحفوظات</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container main-layout" style="grid-template-columns: 1fr; max-width: 800px;">
+        <main class="feed-container">
+            <div class="glass-card" style="padding: 20px; margin-bottom: 20px; text-align: center;">
+                <h2>🔖 صور السماء والطبيعة المحفوظة</h2>
+                <p class="text-muted">جميع الصور التي قمت بحفظها للرجوع إليها لاحقاً تظهر هنا.</p>
+            </div>
+
+            <!-- SAVED POSTS FEED -->
+            <div id="favorites-feed">
+                <!-- سيتم حقن المنشورات هنا بواسطة JavaScript -->
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="/js/favorites.js"></script>
+</body>
+</html>

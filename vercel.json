@@ -1,0 +1,13 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/login", "destination": "/login.html" },
+    { "source": "/registration", "destination": "/registration.html" },
+    { "source": "/home", "destination": "/home.html" },
+    { "source": "/profile", "destination": "/profile.html" },
+    { "source": "/favorite", "destination": "/favorite.html" },
+    { "source": "/admin", "destination": "/admin.html" },
+    { "source": "/block", "destination": "/block.html" }
+  ]
+}

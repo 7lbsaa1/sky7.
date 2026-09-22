@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تم حظر الحساب - sky7</title>
+    <link rel="stylesheet" href="/css/global.css">
+    <style>
+        .block-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            background: radial-gradient(circle at center, #1a0505 0%, var(--bg-dark) 100%);
+        }
+        .block-card {
+            max-width: 450px;
+            text-align: center;
+            padding: 40px 30px;
+            border-color: rgba(255, 59, 92, 0.3);
+        }
+        .block-icon {
+            width: 80px;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 10px rgba(255,59,92,0.5));
+        }
+        .block-title {
+            color: var(--accent-red);
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        .block-text {
+            color: var(--text-main);
+            line-height: 1.6;
+            margin-bottom: 30px;
+            font-size: 15px;
+        }
+        .block-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .btn-facebook {
+            background: #1877F2;
+            color: white;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: 0.2s;
+        }
+        .btn-facebook:hover { background: #166fe5; }
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--glass-border);
+            color: var(--text-muted);
+            padding: 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .btn-outline:hover { background: rgba(255,255,255,0.05); color: white; }
+    </style>
+</head>
+<body>
+    <div class="block-container">
+        <div class="glass-card block-card">
+            <img src="https://cdn-icons-png.flaticon.com/128/889/889139.png" alt="Blocked" class="block-icon">
+            <h1 class="block-title">تم حظر حسابك</h1>
+            <p class="block-text">تم حظر حسابك من استخدام الموقع. إذا كنت تعتقد أن هذا القرار تم بالخطأ يمكنك التواصل مع الإدارة.</p>
+            
+            <div class="block-actions">
+                <a href="https://www.facebook.com/profile.php?id=61584178882412&locale=ar_AR" target="_blank" class="btn-facebook">
+                    التواصل معنا على Facebook
+                </a>
+                <button id="block-logout-btn" class="btn-outline">تسجيل الخروج</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="/js/block.js"></script>
+</body>
+</html>

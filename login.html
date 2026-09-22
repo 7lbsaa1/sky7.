@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-width=1.0">
+    <title>تسجيل الدخول - sky7</title>
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/auth.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="glass-card auth-card">
+            <div class="brand">
+                <img src="https://cdn-icons-png.flaticon.com/128/7978/7978734.png" alt="sky7 logo" class="logo">
+                <h1>sky7</h1>
+            </div>
+            
+            <form id="login-form">
+                <div class="input-group">
+                    <label for="email">البريد الإلكتروني</label>
+                    <input type="email" id="email" required placeholder="أدخل بريدك الإلكتروني">
+                </div>
+                
+                <div class="input-group password-group">
+                    <label for="password">كلمة المرور</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="password" required placeholder="أدخل كلمة المرور">
+                        <span class="toggle-password" id="toggle-password">👁️</span>
+                    </div>
+                </div>
+
+                <div id="error-message" class="error-text"></div>
+
+                <button type="submit" class="btn-primary auth-btn" id="login-btn">تسجيل الدخول</button>
+            </form>
+            
+            <p class="auth-footer">ليس لديك حساب؟ <a href="/registration">إنشاء حساب جديد</a></p>
+        </div>
+    </div>
+
+    <script type="module" src="/js/auth.js"></script>
+</body>
+</html>

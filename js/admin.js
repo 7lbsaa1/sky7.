@@ -15,7 +15,7 @@ onAuthStateChanged(auth, async (user) => {
     if (snapshot.exists()) {
         const userData = snapshot.val();
         if (!userData.isAdmin) {
-            window.location.href = '/home';
+            window.location.href = '/admin';
             return;
         }
         // المستخدم مدير، قم بتحميل اللوحة

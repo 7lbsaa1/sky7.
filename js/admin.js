@@ -4,7 +4,7 @@ import { ref, get, update } from "https://www.gstatic.com/firebasejs/10.8.1/fire
 
 onAuthStateChanged(auth, async (user) => {
     if (!user) {
-        window.location.href = '/login';
+        window.location.href = '/admin';
         return;
     }
 

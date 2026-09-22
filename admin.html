@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة الإدارة - sky7</title>
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar glass-card">
+        <div class="nav-container">
+            <a href="/home" class="nav-logo">
+                <img src="https://cdn-icons-png.flaticon.com/128/7978/7978734.png" alt="sky7 logo">
+                <span>sky7 Admin</span>
+            </a>
+            <div class="nav-menu">
+                <a href="/home" class="nav-link">العودة للموقع</a>
+                <button id="admin-logout-btn" class="btn-logout">خروج</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container main-layout admin-layout">
+        
+        <!-- ADMIN SIDEBAR -->
+        <aside class="sidebar glass-card">
+            <ul class="sidebar-links">
+                <li><a href="/admin" class="active">📊 لوحة القيادة</a></li>
+                <li><a href="/users">👥 إدارة المستخدمين</a></li>
+                <li><a href="/usercredentials">✅ التوثيقات</a></li>
+                <li><a href="/reports">🚩 البلاغات</a></li>
+            </ul>
+        </aside>
+
+        <!-- ADMIN MAIN CONTENT -->
+        <main class="admin-content">
+            <h2 class="admin-page-title">نظرة عامة على المنصة</h2>
+            
+            <!-- STATS CARDS -->
+            <div class="stats-grid">
+                <div class="glass-card stat-card">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-info">
+                        <h3>إجمالي المستخدمين</h3>
+                        <p id="total-users-count">...</p>
+                    </div>
+                </div>
+                <div class="glass-card stat-card">
+                    <div class="stat-icon">📸</div>
+                    <div class="stat-info">
+                        <h3>المنشورات</h3>
+                        <p id="total-posts-count">...</p>
+                    </div>
+                </div>
+                <div class="glass-card stat-card">
+                    <div class="stat-icon">✅</div>
+                    <div class="stat-info">
+                        <h3>الحسابات الموثقة</h3>
+                        <p id="verified-users-count">...</p>
+                    </div>
+                </div>
+                <div class="glass-card stat-card stat-danger">
+                    <div class="stat-icon">🚫</div>
+                    <div class="stat-info">
+                        <h3>المحظورين</h3>
+                        <p id="blocked-users-count">...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RECENT USERS TABLE -->
+            <div class="glass-card admin-panel-card">
+                <div class="panel-header">
+                    <h3>أحدث المستخدمين</h3>
+                    <div class="admin-search">
+                        <input type="text" id="admin-search-user" placeholder="ابحث بالاسم أو المعرف...">
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>المستخدم</th>
+                                <th>البريد الإلكتروني</th>
+                                <th>الحالة</th>
+                                <th>الإجراءات</th>
+                            </tr>
+                        </thead>
+                        <tbody id="admin-users-tbody">
+                            <!-- Users injected here via JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="/js/admin.js"></script>
+</body>
+</html>

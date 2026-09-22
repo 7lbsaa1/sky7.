@@ -120,6 +120,6 @@ window.toggleVerification = async function(uid, currentStatus) {
 
 document.getElementById('admin-logout-btn').addEventListener('click', () => {
     signOut(auth).then(() => {
-        window.location.href = '/login';
+        window.location.href = '/admin';
     });
 });

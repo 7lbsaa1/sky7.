@@ -1,0 +1,134 @@
+.profile-container {
+    margin-top: 85px;
+    max-width: 960px;
+}
+
+.profile-header-card {
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.cover-container {
+    width: 100%;
+    height: 220px;
+    background: #121824;
+    overflow: hidden;
+    position: relative;
+}
+
+.cover-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-info-bar {
+    padding: 0 25px 20px 25px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    position: relative;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.avatar-wrapper {
+    position: relative;
+    margin-top: -60px;
+}
+
+.avatar-wrapper img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid var(--bg-dark);
+    object-fit: cover;
+    background: var(--bg-dark);
+}
+
+.user-details {
+    flex: 1;
+    margin-right: 15px;
+}
+
+.name-line {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.name-line h1 {
+    font-size: 24px;
+}
+
+.bio-text {
+    margin-top: 8px;
+    color: var(--text-main);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.profile-stats-bar {
+    display: flex;
+    border-top: 1px solid var(--glass-border);
+    padding: 15px 25px;
+    background: rgba(0,0,0,0.2);
+}
+
+.stat-item {
+    margin-left: 35px;
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-number {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.stat-label {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+/* EDIT MODAL STYLES */
+.edit-modal {
+    max-width: 550px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.cover-preview-box, .avatar-preview-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+#edit-cover-preview {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid var(--glass-border);
+}
+
+#edit-avatar-preview {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--glass-border);
+}
+
+.char-counter {
+    text-align: left;
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 4px;
+}
+
+.section-title {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
